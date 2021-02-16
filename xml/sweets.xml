@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sweets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.example.org/sweets"
+    xsi:schemaLocation="http://www.example.org/sweets sweets.xsd">
+    <candy name="bee1">
+        <name>Bee</name>
+        <energy>12</energy>
+        <type>карамель</type>
+        <ingredients>
+            <water>200</water>
+            <sugar>13</sugar>
+            <fructose>2</fructose>
+            <typeChocolate>white</typeChocolate>
+            <vanillin>35</vanillin>
+        </ingredients>
+        <value>
+            <proteins>465</proteins>
+            <fats>233</fats>
+            <carbohydrates>76</carbohydrates>
+        </value>
+        <production>Roshen</production>
+    </candy>
+    <candy name="bee2">
+        <name>Bee</name>
+        <energy>54</energy>
+        <type>карамель</type>
+        <ingredients>
+            <water>120</water>
+            <sugar>46</sugar>
+            <fructose>72</fructose>
+            <typeChocolate>white</typeChocolate>
+            <vanillin>25</vanillin>
+        </ingredients>
+        <value>
+            <proteins>78</proteins>
+            <fats>112</fats>
+            <carbohydrates>32</carbohydrates>
+        </value>
+        <production>Roshen</production>
+    </candy>
+    </sweets>
