@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/sweets"
+    xmlns:tns="http://www.example.org/sweets"
+    elementFormDefault="qualified">
+    <element name="sweets">
+        <complexType>
+            <sequence>
+                <element name="candy" type="tns:Candy"
+                    minOccurs="2" maxOccurs="unbounded" />
+            </sequence>
+            </complexType>
+    </element>
+    <complexType name="Candy">
+        <sequence>
+            <element name="name" type="string" />
+            <element name="energy" type="positiveInteger" />
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="карамель" />
+                        <enumeration value="ирис" />
+                        <enumeration value="шоколадная" />
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="ingredients" type="tns:Ingredients" />
+            <element name="value" type="tns:Value" />
+            <element name="production" type="string" />
+        </sequence>
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="([a-zA-Z])[a-zA-Z0-9]{3,19}" />
+                </restriction> 
+            </simpleType>
+        </attribute>
+        </complexType>
+    <complexType name="Value">
+        <sequence>
+            <element name="proteins" type="positiveInteger" />
+            <element name="fats" type="positiveInteger" />
+            <element name="carbohydrates" type="positiveInteger" />
+        </sequence>
+    </complexType>
+    <complexType name="Ingredients">
+        <sequence>
+            <element name="water" type="positiveInteger" />
+            <element name="sugar" type="positiveInteger" />
+            <element name="fructose" type="positiveInteger" />
+            <element name="typeChocolate" type="string"
+                minOccurs="0" />
+            <element name="vanillin" type="positiveInteger" />
+        </sequence>
+    </complexType>
+</schema>
